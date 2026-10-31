@@ -4,6 +4,23 @@ An end-to-end data analytics and machine learning pipeline processing over **10,
 
 ---
 
+## 📖 Data Dictionary & Feature Units
+
+| Variable Name | Data Type | Units / Scale | Description |
+| :--- | :--- | :--- | :--- |
+| `sample_id` | String | Unique ID | Primary key for field observations (`AVO_XXXXX`) |
+| `region` | Categorical | Geographic Zone | Agricultural region (Galilee, Hula_Valley, Coastal_Plain, Negev) |
+| `soil_ph` | Float | $0.0 - 14.0\text{ pH}$ | Soil acidity level measured via field sensors |
+| `chlorophyll_index` | Float | SPAD / CCI Index | Relative leaf chlorophyll content |
+| `irrigation_m3` | Float | $m^3$ | Total seasonal irrigation volume per plot |
+| `avg_temp_c` | Float | $^\circ C$ | Mean ambient temperature during fruit development |
+| `yield_kg` | Float | $kg$ | Harvest crop weight per plot |
+| `canopy_cover_pct` | Float | $\%$ | Leaf area index / Canopy coverage percentage from imaging |
+| `leaf_texture_score` | Float | $0.0 - 1.0$ | Normalized morphological boundary edge score |
+| `quality_grade` | Categorical | Target Label | Classification outcome (`Premium`, `Standard`, `Export_Reject`) |
+
+---
+
 ## 🏗️ Architecture & Pipeline Flow
 
 1. **SQL Data Engine (`SQLite` & `Pandas`):**
@@ -23,7 +40,7 @@ An end-to-end data analytics and machine learning pipeline processing over **10,
 
 ---
 
-## 📊 Results & Visualizations
+## 📊 Model Visualizations
 
 ### Decision Tree Architecture
 ![Decision Tree Architecture](decision_tree_architecture.png)
